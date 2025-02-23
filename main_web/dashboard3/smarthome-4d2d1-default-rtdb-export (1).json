@@ -1,0 +1,45 @@
+{
+  "Devices": {
+    "Door": "ON",
+    "Fan": "OFF",
+    "Light": "ON",
+    "Window": "ON",
+    "bathroom": {
+      "Door": "ON",
+      "Fan": "ON",
+      "Light": "OFF",
+      "Window": "ON"
+    },
+    "bedroom": {
+      "Door": "ON",
+      "Fan": "ON",
+      "Light": "OFF",
+      "Window": "ON"
+    },
+    "kitchen": {
+      "Door": "ON",
+      "Fan": "ON",
+      "Light": "OFF",
+      "Window": "ON"
+    },
+    "living": {
+      "Door": "OFF",
+      "Fan": "ON",
+      "Light": "OFF",
+      "Window": "OFF"
+    },
+    "living-room": {
+      "Door": "ON",
+      "Fan": "OFF",
+      "Light": "OFF",
+      "Window": "ON"
+    }
+  },
+  "Fire": "YES",
+  "Gate": "ON",
+  "Humidity": 90,
+  "HC": "YES",
+  "Light": 70,
+  "SMOKE": "NO",
+  "Temperature": 100
+}

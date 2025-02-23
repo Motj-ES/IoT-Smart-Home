@@ -1,0 +1,160 @@
+<!--#Resovling code-->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- header for html -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Smart Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <!-- body for html -->
+
+  <body>
+    <!-- set header name for web-->
+    <h1 class="title">IoT Smart Home</h1>
+    <p id="datetime" align="right"></p>
+
+    <div class="container">
+      <div class="sidebar" id="mySidebar">
+        <a class="link_to_new" href="Dashboard.html">
+          <div class="dashboard dropdown">Dash board</div>
+        </a>
+
+        <div class="mainroom dropdown">Main room</div>
+
+        <a class="link_to_new" href="Summary.html">
+          <div class="summary dropdown">Summary</div>
+        </a>
+
+        <!-- set for living room in slidebar -->
+        <div class="info-container">
+          <div class="room-info" id="living-room-btn">
+            <h3>Living room</h3>
+            <p>Temperature: <span class="temp">__°C</span></p>
+            <p>Humidity:<span class="hu">__%</span></p>
+          </div>
+
+          <!-- set for bedroom in slidebar -->
+          <div class="room-info" id="bedroom-btn">
+            <h3>Bedroom</h3>
+            <p>Temperature: <span class="temp">__°C</span></p>
+            <p>Humidity:<span class="hu">__%</span></p>
+          </div>
+
+          <!-- set for kitchen in slidebar -->
+          <div class="room-info" id="kitchen-btn">
+            <h3>Kitchen</h3>
+            <p>Temperature: <span class="temp">__°C</span></p>
+            <p>Humidity:<span class="hu">__%</span></p>
+          </div>
+
+          <!-- set for bathroom in slidebar -->
+          <div class="room-info" id="bathroom-btn">
+            <h3>Bathroom</h3>
+            <p>Temperature: <span class="temp">__°C</span></p>
+            <p>Humidity:<span class="hu">__%</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content area -->
+      <hr />
+      <div class="main-content">
+        <div>
+          <!-- Room sections -->
+          <h1 class="livingroom active" id="living-room">Living room</h1>
+          <h1 class="bedroom" id="bedroom">Bedroom</h1>
+          <h1 class="kitchen" id="kitchen">Kitchen</h1>
+          <h1 class="bathroom" id="bathroom">Bathroom</h1>
+        </div>
+
+        <!-- infor of hu&temp in maincontent -->
+        <hr />
+
+        <hr />
+        <div class="temp-hu">
+          <!-- line 1 output is Temp -->
+          <p align="right">Temp: <span class="temp" align="right"></span></p>
+          <!-- processing information from firebase & js file -->
+
+          <p align="right">Humidity: <span class="hu" align="right"></span></p>
+          <!-- processing information from firebase & js file -->
+        </div>
+        <hr />
+
+        <!-- infor of devices -->
+        <div class="devices">
+          <div class="device">
+            <!-- set up for fan -->
+            <img
+              id="fan_img"
+              src="image/fan_off.png"
+              alt="fan"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Fan</b></p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="fan" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="device">
+            <!-- set up for light -->
+            <img
+              id="light_img"
+              src="image/light_on.png"
+              alt="light"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Light</b></p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="light" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="device" id="device-window">
+            <!-- set up for window -->
+            <img
+              id="wd_img"
+              src="image/window-closed.png"
+              alt="window"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Window</b></p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="window" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="device">
+            <!-- set up for door -->
+            <img
+              id="door_img"
+              src="image/door_closed.png"
+              alt="door"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Door</b></p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="door" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

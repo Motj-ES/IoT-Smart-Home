@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- header for html -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <!-- body for html -->
+  <body>
+    <!-- set title name-->
+    <h1 class="title" align="center">IoT Smart Home</h1>
+    <p id="datetime" align="right"></p>
+    <!-- set layout for website -->
+    <div class="container">
+      <!-- set Sidebar -->
+      <div class="sidebar" id="mySidebar">
+        <div class="dashboard dropdown">Dash board</div>
+        <!-- Nút ấn mainroom, dẫn tới trang mới -->
+        <!-- Room buttons with IDs for event handling -->
+        <a class="link_to_new" href="main.html">
+          <div class="mainroom dropdown">Main room</div>
+        </a>
+        <!-- Nút ấn Summary, dẫn tới trang mới -->
+        <a class="link_to_new" href="Summary.html">
+          <div class="summary dropdown">Summary</div>
+        </a>
+      </div>
+
+      <!-- Main content area -->
+      <div class="main-content">
+        <canvas
+          id="myChartTemp"
+          style="width: 40%; max-width: 80%; height: 30%; max-height: 60%"
+        ></canvas>
+        <canvas
+          id="myChartHumid"
+          style="width: 40%; max-width: 80%; height: 30%; max-height: 60%"
+        ></canvas>
+      </div>
+      <!-- Cho main-container-->
+    </div>
+    <!-- Cho container-->
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="Chart.js"></script>
+  </body>
+</html>

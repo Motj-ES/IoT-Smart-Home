@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- header for html -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <!-- body for html -->
+  <body>
+    <!-- set title name-->
+    <h1 class="title" align="center">IoT Smart Home</h1>
+    <p id="datetime" align="right"></p>
+    <!-- set layout for website -->
+    <div class="container">
+      <!-- set Sidebar -->
+      <div class="sidebar" id="mySidebar">
+        <!-- Nút ấn Dashboard, dẫn tới trang mới -->
+        <a class="link_to_new" href="Dashboard.html">
+          <div class="dashboard dropdown">Chart</div>
+        </a>
+
+        <!-- Room buttons with IDs for event handling -->
+        <a class="link_to_new" href="main.html">
+          <div class="mainroom dropdown">Main room</div>
+        </a>
+
+        <div class="summary dropdown">Summary</div>
+      </div>
+
+      <!-- button on sideBar
+      <div>
+        <button class="bnt-on btn" id="sb_bt" onclick="sb_open();">☰</button>
+      </div>
+      -->
+      <!-- Main content area -->
+      <div class="main-content">
+        <!-- infor of devices -->
+        <div class="devices1">
+          <div class="device">
+            <img
+              id="smoke_img"
+              src="./image/smoke.png"
+              alt="smoke"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Smoke Status</b></p>
+            <p><span class="smoke-status">____</span></p>
+          </div>
+
+          <div class="device">
+            <img
+              id="fire_img"
+              src="./image/fire.png"
+              alt="Fire"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Fire Status </b></p>
+            <p><span class="fire-status">____</span></p>
+          </div>
+
+          <div class="device">
+            <img
+              id="light_img"
+              src="./image/Light_on.png"
+              alt="Light_status"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>LDR Status</b></p>
+            <p><span class="light-status">____</span></p>
+          </div>
+
+          <div class="device">
+            <img
+              id="hanging_clothes_img"
+              src="image/hanging_clothes_img.png"
+              alt="hanging_clothes"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Hanging clothes status</b></p>
+            <p><span class="hc-status">____</span></p>
+          </div>
+
+          <div class="device">
+            <img
+              id="Temperature_img"
+              src="image/Temperature_icon.png"
+              alt="Temperature"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Temperature</b></p>
+            <p><span class="temp-status">____</span></p>
+          </div>
+
+          <div class="device">
+            <img
+              id="Humidity_img"
+              src="image/Humidity_icon.png"
+              alt="Humidity"
+              style="width: 50px; height: 50px"
+            />
+            <p><b>Humidity</b></p>
+            <p><span class="humid-status">____</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="summary.js"></script>
+  </body>
+</html>

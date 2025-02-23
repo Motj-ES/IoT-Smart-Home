@@ -1,0 +1,331 @@
+:root {
+  --main-bg-color: rgb(20, 139, 28);
+  --text-color: #fff;
+}
+
+/* margin and padding using created distance around the elements */
+/* but margin is outside of element without padding is inside of element */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.title {
+  text-align: center;
+  color: var(--text-color);
+  padding: 30px;
+  margin: 0;
+  background-color: var(--main-bg-color);
+  font-weight: 40px;
+  font-size: 20px;
+}
+
+/* set style for main and summary  */
+.dropdown {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  /* top, right, bottom, left */
+  margin: 5px 5px 10px 10px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+
+.dropdown:hover {
+  background: var(--main-bg-color);
+  border-radius: 50px;
+  color: var(--text-color);
+}
+
+/* hiding all blocks */
+.main-content h1 {
+  display: none;
+}
+
+/* only display element optioned */
+.main-content .active {
+  display: block;
+}
+
+/* button */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* turn off button */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* turn on button */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* button setting */
+input:checked + .slider {
+  background-color: var(--main-bg-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Style for container */
+.device {
+  margin: 50px;
+  padding: 50px;
+}
+
+/* when pointing then change color */
+.toggle-switch:hover {
+  opacity: 1;
+}
+
+/* Date and Time */
+#datetime {
+  color: #090909;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+/* slidebar */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* temp - humid */
+.temp-hu {
+  font: size 16px;
+  font-weight: 600;
+}
+
+.sidebar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.room-info {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+
+  text-shadow: var(--main-bg-color);
+}
+
+.room-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.room-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 4;
+  width: 80%;
+  padding: 30px;
+}
+.button {
+  display: grid;
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.main-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.climate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* structure for web  */
+.devices {
+  display: flexbox;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.device1 {
+  display: grid;
+  grid-column: auto;
+}
+
+/* set for summary */
+.devices1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.device {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 70px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.device p {
+  margin-bottom: 10px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  width: 40px;
+  height: 10px;
+}
+
+/*Them background cho tung phong voi moi id rieng trong slidebar*/
+#living-room-btn {
+  background-image: url(image/living_room_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*Them background cho tung phong voi moi id rieng trong slidebar*/
+#bedroom-btn {
+  background-image: url(image/bedroom_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*Them background cho tung phong voi moi id rieng trong slidebar*/
+#kitchen-btn {
+  background-image: url(image/kitchen_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*Them background cho tung phong voi moi id rieng trong slidebar*/
+#bathroom-btn {
+  background-image: url(image/bathroom_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* .room-info.active, */
+.room-info:hover {
+  opacity: 0.8;
+  /* Tao outline cho chu, lam noi bat chu */
+  text-shadow: var(--main-bg-color);
+
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.room-info.active {
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+    #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  color: var(--main-bg-color);
+}
+
+/* Button on/off navigation */
+.bnt-on {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-bg-color);
+  margin: 20px;
+  display: block;
+  font-size: 25px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+}
+
+.bnt-off {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-bg-color);
+  display: block;
+  font-size: 30px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  transform: translateX(370px);
+}
+
+#btn-off {
+  display: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.bnt-off:hover {
+  background: red;
+}
+
+.link_to_new {
+  text-decoration: none;
+}
+
+.dashboard {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px 5px 10px 10px;
+  transition: background-color 0.4;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
